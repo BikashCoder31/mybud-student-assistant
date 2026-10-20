@@ -1,12 +1,12 @@
 {
   "project": "MyBud Student Life Assistant",
   "maintainer": "Bikash Kushwaha",
-  "date": "2026-10-20",
+  "date": "2026-10-21",
   "files": [
     {
       "path": ".env.example",
-      "bytes": 331,
-      "sha256": "511d6434d560cf19578e862f26614a82a70ae518992c49272bb28eedc945e5c2"
+      "bytes": 526,
+      "sha256": "35636c1ce5675c92e7f6fe017a8817da6510e7f3eb88684d1d4b8bbb776753b1"
     },
     {
       "path": ".gitattributes",
@@ -20,33 +20,38 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 167,
-      "sha256": "2a59662a177bcdfa95ea10c43cefaaf4893c1f27b0a281eb556fc72ee9d39d4c"
+      "bytes": 202,
+      "sha256": "74ee33579dbe9a97b1b5343d0c7e7f5cd3089d36ecffd6ce0aa19d9893943a05"
+    },
+    {
+      "path": ".vercelignore",
+      "bytes": 149,
+      "sha256": "1152709a95ad4e26b395b6e10e816a2c1fc338da61e7acdb775fa093706527f4"
     },
     {
       "path": "docs/API.md",
-      "bytes": 2695,
-      "sha256": "722bdf268483c9fbc2a6ff42f81c27d5fd874e8c705503a01728be4dc238fffe"
+      "bytes": 2848,
+      "sha256": "07695db9ce0687570af55563ad2c8879fbee501d7fc0906c4df359dfa29c292e"
     },
     {
       "path": "docs/DEPLOYMENT.md",
-      "bytes": 3223,
-      "sha256": "811064e491af4f6fc22e28b85f917b2c7d2f1e05414e841882744007574e326a"
+      "bytes": 5228,
+      "sha256": "1ac016d4756a70d115da391ea41b38d54d0afd2fefd54f3ddb151fc821052b57"
     },
     {
       "path": "docs/presentation/MyBud_Student_Life_Assistant.pptx",
-      "bytes": 852367,
-      "sha256": "fca4abc8e22e801556c26133e5fa87cfecb28a43d7e7cf7ecd24f201ad7a267d"
+      "bytes": 852682,
+      "sha256": "413b9fc0bd163240c4c28c2a640fcb76c33a266ff36f1918c901d3e1ac2096dd"
     },
     {
       "path": "docs/presentation/MyBud_Student_Life_Assistant_Slides.pdf",
-      "bytes": 979080,
-      "sha256": "ea6ac572694fb4287e4561e3485c90600e0190928b73e4a294d6b02b55903335"
+      "bytes": 985155,
+      "sha256": "117fc57a8c80484f134d30b14e88edcf199d28490a9fc7ccfaccb4b9648a4a72"
     },
     {
       "path": "docs/reports/MyBud_Project_Report.pdf",
-      "bytes": 626576,
-      "sha256": "1ce28e4a6198edc9605278f20483119ddcd596954e4d6f310e60b27324c0efbc"
+      "bytes": 627512,
+      "sha256": "a411c6514964672a9ed01fc43acfd6e5b3ec3f3e3bf258902f04097a7b76ad1b"
     },
     {
       "path": "docs/screenshots/01-home.png",
@@ -85,8 +90,8 @@
     },
     {
       "path": "docs/VERIFICATION.md",
-      "bytes": 5477,
-      "sha256": "b725cf93ada8813a791f57e3b1714b929e7e7840fb34c0d7b0dcdedf24df0dfa"
+      "bytes": 6973,
+      "sha256": "c6bd43baf49d7d0f23f565570adc69450c9daaafef7e3f8feb83188853004744"
     },
     {
       "path": "main/__init__.py",
@@ -100,8 +105,8 @@
     },
     {
       "path": "main/context_processors.py",
-      "bytes": 138,
-      "sha256": "7368209ef89312428678e85872e75ed8e3f131d071688fa573066d0bcc979bb7"
+      "bytes": 216,
+      "sha256": "6f327a84310487734f10172e8e1e91d31737da215b4615581191e20bc3335cd1"
     },
     {
       "path": "main/migrations/0001_initial.py",
@@ -125,13 +130,18 @@
     },
     {
       "path": "main/services/assistant.py",
-      "bytes": 9162,
-      "sha256": "4afd7db9fd0407787c190007bb891530211d82ecc4add4eb63acceea3c4f99fe"
+      "bytes": 9229,
+      "sha256": "6e4fbae09f3290ae423602ffe6c59c3b78e092f438f5147bcaa49132e02d33d8"
     },
     {
       "path": "main/services/expenses.py",
       "bytes": 3446,
       "sha256": "50b1de62bddb12e6424a96589d834b7844a2334889f5ce7c3e9927354ed0ccc2"
+    },
+    {
+      "path": "main/test_deployment.py",
+      "bytes": 3134,
+      "sha256": "934f8ca882f62043220cb79ee4b8229d2b9ff894931bb1f9bbce8f9bb1559d77"
     },
     {
       "path": "main/tests.py",
@@ -160,8 +170,8 @@
     },
     {
       "path": "project/settings.py",
-      "bytes": 3858,
-      "sha256": "2e35404d01a8cf93aa0f3403b609c7a77bf763a912a6f239c23357ea7c945ba1"
+      "bytes": 5020,
+      "sha256": "243fd1c1836de343bd39903519abff8f35fd0c966a2fc69c5442b27783414295"
     },
     {
       "path": "project/urls.py",
@@ -175,13 +185,13 @@
     },
     {
       "path": "pyproject.toml",
-      "bytes": 145,
-      "sha256": "5f20bfb678a69202cebb1d7c6421045cbf9bde8459380d2797626faa60cca25a"
+      "bytes": 544,
+      "sha256": "abb1bf6975a2824a04c5565d2fb1cba19f41e2b658a3f5a9d0a58069d95aba00"
     },
     {
       "path": "README.md",
-      "bytes": 7734,
-      "sha256": "6be06375ed7d7446de26d36ce3d04b1ef908b1bcafe99b25a90f7d0c7f5445cb"
+      "bytes": 8324,
+      "sha256": "3078947a1eb9a175f1e5edcbc9bb2293606192f5a51c4a1e99f283662ccd225b"
     },
     {
       "path": "requirements-dev.txt",
@@ -190,13 +200,13 @@
     },
     {
       "path": "requirements-lock.txt",
-      "bytes": 578,
-      "sha256": "6f8bf8f86a08217e85c13986c273402e176a2ab012342e7c0b789e3c0072808c"
+      "bytes": 638,
+      "sha256": "36499e8d67f7607f917ecf2aa7576a70b9425c854d8487e52bfb909481ec4097"
     },
     {
       "path": "requirements.txt",
-      "bytes": 91,
-      "sha256": "abcb5727881a80b394c0c66657a90963c417e60247ce454e655be0b8b7403725"
+      "bytes": 137,
+      "sha256": "231f58b8adefa11eebfad053073db9c45875c5ad0d19d49c30c36e812189af80"
     },
     {
       "path": "SOURCE_ACKNOWLEDGEMENTS.md",
@@ -240,8 +250,8 @@
     },
     {
       "path": "static/js/recipe.js",
-      "bytes": 3228,
-      "sha256": "8bf57f6609e4252874d6267b76152607cb88bbe7caba273a0456dc8df1aab14b"
+      "bytes": 3289,
+      "sha256": "a8be3b9b884451b0cad6d712f82976852e56fa7565f69d3cde8105a192143200"
     },
     {
       "path": "static/js/travel.js",
@@ -265,8 +275,8 @@
     },
     {
       "path": "templates/expenses.html",
-      "bytes": 1834,
-      "sha256": "8e0b4d6a0721e64f306a510abac88c70823460588df580d292e4009938981edc"
+      "bytes": 1822,
+      "sha256": "8649dc02f90bf398eb00a240c6e655a10a7eea0013849c89cd6b77914965c131"
     },
     {
       "path": "templates/home.html",
@@ -275,13 +285,23 @@
     },
     {
       "path": "templates/recipe.html",
-      "bytes": 1609,
-      "sha256": "8dfa34c001483388dd74625ea7e6182f44c51d94cefe44bdc096512f3e9087b1"
+      "bytes": 1663,
+      "sha256": "abe3330ea31d03c4b8f3cba6181c7a31bf81a2479e2f834ba9fcad771808e210"
     },
     {
       "path": "templates/travel.html",
       "bytes": 1071,
       "sha256": "848ec14554dcfd49e1f71170eeba951063160f1993d4e607b70978a706317599"
+    },
+    {
+      "path": "uv.lock",
+      "bytes": 76913,
+      "sha256": "c02764cc6abfa28757564dfd2f12f14aba9257756d00667823572f4f317ca430"
+    },
+    {
+      "path": "vercel.json",
+      "bytes": 269,
+      "sha256": "b017d7398ea1e53a19bd14351797c8a42254fa348add699802ae1fc6a45f4778"
     }
   ]
 }

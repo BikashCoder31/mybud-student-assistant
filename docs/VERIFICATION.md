@@ -1,6 +1,6 @@
 # Verification record
 
-Checked on 20 October 2026 for the maintained MyBud portfolio edition by Bikash Kushwaha.
+Checked on 20–21 October 2026 for the maintained MyBud portfolio edition by Bikash Kushwaha.
 
 ## Backend and configuration
 
@@ -19,6 +19,8 @@ Checked on 20 October 2026 for the maintained MyBud portfolio edition by Bikash 
 | Serverless configuration | PostgreSQL required; weaker TLS modes strengthened and stronger modes preserved; 3 MB hosted image limit enforced |
 | GitHub Actions | [Run 39472651723](https://github.com/BikashCoder31/mybud-student-assistant/actions/runs/39472651723) passed on Ubuntu/Python 3.12, including all 28 tests and Ruff |
 | Vercel production | Deployment ready; [public canonical URL](https://mybud-student-assistant.vercel.app) exercised without authentication |
+| Redeployment persistence | Isolated budget, expense and browser session survived a GitHub-triggered production redeployment; test records then reset |
+| Public security configuration | Missing-CSRF POST rejected with 403; HTTPS HSTS and `X-Frame-Options: DENY` present |
 
 The suite checks six page routes, tool response contracts, real Python syntax parsing without code execution, recipe shape, itinerary duration, invalid JSON and input types, HTTP methods, CSRF enforcement, exact Decimal arithmetic, invalid/nonfinite money, expense deletion/reset and cross-session isolation. Image checks include a real valid PNG and a corrupt checksum. Mocked live checks cover missing configuration, provider failure, parse errors, wrong schema and attempted response metadata overrides.
 
