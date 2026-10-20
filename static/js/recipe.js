@@ -19,7 +19,8 @@
   upload.addEventListener("change", () => {
     const file = upload.files[0]; if (!file) return;
     MyBud.busy(document.getElementById("main"), status, async () => {
-      if (file.size > 5 * 1024 * 1024) throw new Error("Use an image up to 5 MB.");
+      const maxMb = Number(upload.dataset.maxMb);
+      if (file.size > maxMb * 1024 * 1024) throw new Error(`Use an image up to ${maxMb} MB.`);
       const image = await new Promise((resolve, reject) => { const reader = new FileReader(); reader.onload = () => resolve(reader.result); reader.onerror = () => reject(new Error("Unable to read this file.")); reader.readAsDataURL(file); });
       await identify(image);
     });

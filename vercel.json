@@ -1,0 +1,11 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "django",
+  "regions": ["sin1"],
+  "functions": {
+    "project/wsgi.py": {
+      "maxDuration": 60,
+      "excludeFiles": "{docs/**,.git/**,.venv/**,*.sqlite3*,.local-secret-key,.env*}"
+    }
+  }
+}

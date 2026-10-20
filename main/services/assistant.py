@@ -45,8 +45,8 @@ def prepare(task, data):
         image = text(data.get("image"), "Image", 7_000_000)
         try:
             raw = base64.b64decode(image.split(",", 1)[-1], validate=True)
-            if len(raw) > 5 * 1024 * 1024:
-                raise ValueError("Image exceeds 5 MB.")
+            if len(raw) > settings.MYBUD_MAX_IMAGE_MB * 1024 * 1024:
+                raise ValueError("Image exceeds the upload limit.")
             with warnings.catch_warnings():
                 warnings.simplefilter("error", Image.DecompressionBombWarning)
                 with Image.open(io.BytesIO(raw)) as im:
@@ -71,7 +71,7 @@ def prepare(task, data):
             Image.DecompressionBombError,
         ) as exc:
             raise ValueError(
-                "Use a valid JPEG, PNG or WebP image up to 5 MB and 16 million pixels."
+                f"Use a valid JPEG, PNG or WebP image up to {settings.MYBUD_MAX_IMAGE_MB} MB and 16 million pixels."
             ) from exc
     raise ValueError("Unknown tool.")
 

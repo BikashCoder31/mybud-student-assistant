@@ -1,0 +1,14 @@
+.git
+.venv
+.ruff_cache
+.pytest_cache
+__pycache__
+**/__pycache__
+.env*
+.local-secret-key
+*.sqlite3*
+staticfiles
+docs
+.agents
+.claude
+skills-lock.json
