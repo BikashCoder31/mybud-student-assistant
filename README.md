@@ -4,7 +4,9 @@
 
 MyBud brings five student utilities into one web app: recipes with image upload, code review, a monthly expense tracker, travel planning, and chat. This edition repairs the supplied starter's broken routes and service contracts and adds input validation, session isolation, regression checks, and clear setup instructions.
 
-**The app starts in offline demo mode.** Chat, recipe and travel outputs use labelled examples. Code review performs real Python syntax parsing with fixed review tips. Image upload validates the image but does not classify food in demo mode. Expense operations save real data locally. Optional live mode sends submitted tool inputs and images to the configured Gemini model.
+**[Open the live app](https://mybud-student-assistant.vercel.app)** · [GitHub repository](https://github.com/BikashCoder31/mybud-student-assistant) · [Passing CI run](https://github.com/BikashCoder31/mybud-student-assistant/actions/runs/39472651723)
+
+**The public app uses offline demo mode.** Chat, recipe and travel outputs use labelled examples. Code review performs real Python syntax parsing with fixed review tips. Image upload validates the image but does not classify food in demo mode. Expense operations save real data in Neon PostgreSQL on Vercel, or SQLite when running locally. Optional live AI mode sends submitted tool inputs and images to the configured Gemini model.
 
 ![MyBud home screen](docs/screenshots/01-home.png)
 
@@ -17,7 +19,7 @@ MyBud brings five student utilities into one web app: recipes with image upload,
 | Recipe finder | Ingredient-based illustrative meal outline | Generated recipes from ingredients |
 | Dish image | Actual image validation with an explicit no-classification message | Tentative Gemini image description and recipe outline |
 | Travel assistant | Destination-labelled outline for 1–30 days, with no destination lookup | Generated information and itinerary |
-| Expense tracker | Real add, remove, budget and reset operations in SQLite | Same local database operations |
+| Expense tracker | Real add, remove, budget and reset operations in PostgreSQL or local SQLite | Same database operations |
 
 Code snippets are never executed. The app does not claim a trained food classifier, measured recognition accuracy, live travel lookup, or verified nutrition values. [Verification and limits](docs/VERIFICATION.md) records what was actually checked.
 
@@ -60,7 +62,8 @@ Browser forms and safe text rendering
        -> offline examples / Python syntax parsing / image validation
        -> optional Gemini SDK request with response shape validation
     -> session-scoped expense service
-       -> SQLite monthly budgets and exact Decimal amounts
+       -> Neon PostgreSQL on Vercel / SQLite locally
+          monthly budgets and exact Decimal amounts
 ```
 
 | Location | Purpose |
@@ -71,10 +74,11 @@ Browser forms and safe text rendering
 | `main/models.py` | Expense and monthly budget records with database constraints |
 | `templates/` and `static/` | Six pages, dark blue styling, forms and safe DOM rendering |
 | `main/tests.py` | Regression tests for tool APIs, CSRF, amounts and session isolation |
+| `main/test_deployment.py` | PostgreSQL, TLS, serverless persistence and image-limit checks |
 | `.github/workflows/checks.yml` | Automated checks prepared for GitHub Actions |
 | `docs/` | Technical report, presentation, screenshots, API contract and verification |
 
-Technology: Python 3.12, Django 5.2, SQLite, vanilla JavaScript, HTML/CSS, Pillow, google-genai, WhiteNoise and Ruff. Direct dependencies and the full checked environment are pinned. No frontend build, CDN script or Node runtime is required to run the app.
+Technology: Python 3.12, Django 5.2, PostgreSQL/SQLite, vanilla JavaScript, HTML/CSS, Pillow, google-genai, WhiteNoise and Ruff. Direct dependencies and the full checked environment are pinned; `uv.lock` supplies Vercel's Python build. No frontend build, CDN script or Node runtime is required to run the app.
 
 ## Checks
 
@@ -88,7 +92,7 @@ After installation and static collection:
 .\.venv\Scripts\python.exe -m ruff format --check .
 ```
 
-The local suite passed with 23 tests. Browser checks exercise all five tools, actual expense persistence, image upload validation, HTML escaping, and six page layouts at desktop/mobile viewport sizes. See [the complete verification record](docs/VERIFICATION.md). The CI workflow is included; no remote CI result is claimed.
+All 28 tests passed locally and in GitHub Actions on Ubuntu. Public-site browser checks exercised all five tools, actual expense persistence, image upload validation, HTML escaping, and six page layouts at desktop/mobile viewport sizes, with no console errors or failed requests. See [the complete verification record](docs/VERIFICATION.md).
 
 ## Report and presentation
 
@@ -104,7 +108,7 @@ Screenshots: [expenses](docs/screenshots/02-expenses.png), [code review](docs/sc
 
 Expenses use **NPR** and the current calendar month in `Asia/Kathmandu`. Each browser's server-side Django session owns its records. Two browsers see separate data. Clearing session cookies loses access to previous records. There is no account recovery, login flow for student tools, bank connection, or persistent chat history. Back up the database and secret together when needed.
 
-The clean package excludes `.env`, `.local-secret-key`, SQLite files, cached bytecode, dependency environments, and the original academic submission files. [Deployment instructions](docs/DEPLOYMENT.md) describe local GitHub publication and conventional persistent hosting. The SQLite app requires a durable writable disk; an ephemeral serverless filesystem cannot preserve its expense data.
+The clean package excludes private environment files, local keys/databases, dependency environments and the original academic submission files. [Deployment instructions](docs/DEPLOYMENT.md) cover the connected GitHub/Vercel project, Neon PostgreSQL and conventional hosting. Hosted uploads accept images up to 3 MB; the local default is 5 MB. Vercel requires a persistent PostgreSQL `DATABASE_URL` and refuses to fall back to ephemeral SQLite.
 
 ## Maintainer and source
 
