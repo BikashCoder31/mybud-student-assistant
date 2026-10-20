@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="csrf-token" content="{{ csrf_token }}">
+<meta name="description" content="MyBud student life assistant maintained by Bikash Kushwaha">
+<title>{% block title %}MyBud Student Life Assistant{% endblock %}</title>
+<link rel="icon" href="{% static 'icon.svg' %}" type="image/svg+xml">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<script src="{% static 'js/app.js' %}" defer></script>
+{% block extra_js %}{% endblock %}</head>
+<body><a href="#main" class="skip-link">Skip to content</a>
+<nav class="navbar" aria-label="Main navigation"><div class="nav-content">
+<a href="/" class="nav-brand"><h1>MyBud</h1><p>STUDENT LIFE ASSISTANT</p></a><a href="/" class="home-link">Home</a>
+</div></nav>
+<div class="mode-banner">{% if mybud_mode == 'demo' %}<strong>Demo mode</strong> — sample assistant responses, local Python syntax checks and image validation. No AI requests.{% else %}<strong>Live AI mode</strong> — submitted tool inputs and images go to Gemini. Responses may be inaccurate.{% endif %}</div>
+<main id="main" class="container">{% block content %}{% endblock %}</main>
+<footer class="identity">Maintained by <strong>Bikash Kushwaha</strong><br>MyBud Student Life Assistant</footer>
+</body></html>

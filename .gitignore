@@ -1,0 +1,16 @@
+.venv/
+.env
+.local-secret-key
+*.sqlite3
+*.sqlite3-*
+__pycache__/
+*.py[cod]
+staticfiles/
+.ruff_cache/
+.pytest_cache/
+logs/
+media/
+.DS_Store
+.vercel
+.env*
+!.env.example

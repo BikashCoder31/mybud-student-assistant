@@ -1,0 +1,10 @@
+{% extends 'base.html' %}{% load static %}{% block title %}Code Analyzer | MyBud{% endblock %}
+{% block extra_js %}<script src="{% static 'js/code.js' %}" defer></script>{% endblock %}
+{% block content %}<div class="page-header"><h2>Code Analyzer</h2><p>Review a snippet without executing it.</p></div>
+<div class="code-layout"><form id="code-form" class="code-editor-panel"><label for="language">Language</label>
+<select id="language" class="input-field"><option value="python">Python</option><option value="javascript">JavaScript</option></select>
+<label for="code-input">Code snippet</label><textarea id="code-input" class="code-textarea" maxlength="20000" required placeholder="def greet(name):&#10;    return 'Hello ' + name"></textarea>
+<button class="btn btn-primary">Analyze Code</button><p id="code-status" class="status" role="status"></p></form>
+<div class="code-results-panel"><section class="analysis-section"><h3>Syntax or review findings</h3><div id="bugs-list" class="analysis-output">Results will appear here.</div></section>
+<section class="analysis-section"><h3>Suggestions</h3><div id="suggestions-list" class="analysis-output"></div></section>
+<section class="analysis-section"><h3>Explanation</h3><div id="explanations-list" class="analysis-output"></div></section></div></div>{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}{% block content %}
+<div class="home-container"><div class="hero-section"><p class="eyebrow">A little structure for student life</p>
+<h2>Welcome to MyBud</h2><p class="tagline">Your daily tools in one place</p>
+<p class="description">Plan a meal, review code, track a budget or sketch a trip. Choose a tool to get started.</p></div>
+<div class="features-grid">
+<a href="/recipe/" class="feature-card"><span class="feature-icon" aria-hidden="true">🍳</span><h3>Recipe Finder</h3><p>Turn ingredients into a meal outline or upload a dish photo.</p></a>
+<a href="/code/" class="feature-card"><span class="feature-icon" aria-hidden="true">💻</span><h3>Code Analyzer</h3><p>Check Python syntax and explore code review suggestions.</p></a>
+<a href="/expenses/" class="feature-card"><span class="feature-icon" aria-hidden="true">💰</span><h3>Expense Tracker</h3><p>Save expenses and a monthly budget for this browser session.</p></a>
+<a href="/travel/" class="feature-card"><span class="feature-icon" aria-hidden="true">✈️</span><h3>Travel Assistant</h3><p>Build a day by day planning outline for a destination.</p></a>
+</div><div class="chat-section"><a href="/chat/" class="btn btn-primary">Open Chat Assistant</a></div></div>
+{% endblock %}

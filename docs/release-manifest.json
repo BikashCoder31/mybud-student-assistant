@@ -1,0 +1,287 @@
+{
+  "project": "MyBud Student Life Assistant",
+  "maintainer": "Bikash Kushwaha",
+  "date": "2026-10-20",
+  "files": [
+    {
+      "path": ".env.example",
+      "bytes": 331,
+      "sha256": "511d6434d560cf19578e862f26614a82a70ae518992c49272bb28eedc945e5c2"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 139,
+      "sha256": "fc3562794b902fe2856d068040bcbc1e35d61df20123ded29f83e0304fdaa41e"
+    },
+    {
+      "path": ".github/workflows/checks.yml",
+      "bytes": 588,
+      "sha256": "be2c208a8021372c35cdf11d47a8254ff6ccdc9e71084ec53796a0b7aa5956cd"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 167,
+      "sha256": "2a59662a177bcdfa95ea10c43cefaaf4893c1f27b0a281eb556fc72ee9d39d4c"
+    },
+    {
+      "path": "docs/API.md",
+      "bytes": 2695,
+      "sha256": "722bdf268483c9fbc2a6ff42f81c27d5fd874e8c705503a01728be4dc238fffe"
+    },
+    {
+      "path": "docs/DEPLOYMENT.md",
+      "bytes": 3223,
+      "sha256": "811064e491af4f6fc22e28b85f917b2c7d2f1e05414e841882744007574e326a"
+    },
+    {
+      "path": "docs/presentation/MyBud_Student_Life_Assistant.pptx",
+      "bytes": 852367,
+      "sha256": "fca4abc8e22e801556c26133e5fa87cfecb28a43d7e7cf7ecd24f201ad7a267d"
+    },
+    {
+      "path": "docs/presentation/MyBud_Student_Life_Assistant_Slides.pdf",
+      "bytes": 979080,
+      "sha256": "ea6ac572694fb4287e4561e3485c90600e0190928b73e4a294d6b02b55903335"
+    },
+    {
+      "path": "docs/reports/MyBud_Project_Report.pdf",
+      "bytes": 626576,
+      "sha256": "1ce28e4a6198edc9605278f20483119ddcd596954e4d6f310e60b27324c0efbc"
+    },
+    {
+      "path": "docs/screenshots/01-home.png",
+      "bytes": 303011,
+      "sha256": "38534dc3f569afe6a7b85e72bb6616fb66beac1110dad0570f9840fceb56ad33"
+    },
+    {
+      "path": "docs/screenshots/02-expenses.png",
+      "bytes": 219210,
+      "sha256": "f1ffd31cd6ff63d3f76585eb7a04c4d790246cd3e55adfc1011921e1dd4ced40"
+    },
+    {
+      "path": "docs/screenshots/03-code-analysis.png",
+      "bytes": 284292,
+      "sha256": "79137065bbbc4a6f60b4a63ee053ef38aac3e99721feb357216cf52054f2169b"
+    },
+    {
+      "path": "docs/screenshots/04-recipes.png",
+      "bytes": 196581,
+      "sha256": "4b4faec1840b488d770ab34ae8bdebacb08ce07c51aac33d33201e80b34a1fca"
+    },
+    {
+      "path": "docs/screenshots/05-travel.png",
+      "bytes": 200479,
+      "sha256": "072925f1b3881bb224a276bdda6740832221984e8cdc170b9c97ece9423448eb"
+    },
+    {
+      "path": "docs/screenshots/06-chat.png",
+      "bytes": 157667,
+      "sha256": "b3e7c1e641a3b29f08a900a3f6eb9ec66446928f4ae7d31674bf88f3c9238c78"
+    },
+    {
+      "path": "docs/screenshots/07-mobile.png",
+      "bytes": 172695,
+      "sha256": "e5aac5dd2da740bb80d7bc389d5659001521ae24ac234eb1ffc0b1a10d0aad43"
+    },
+    {
+      "path": "docs/VERIFICATION.md",
+      "bytes": 5477,
+      "sha256": "b725cf93ada8813a791f57e3b1714b929e7e7840fb34c0d7b0dcdedf24df0dfa"
+    },
+    {
+      "path": "main/__init__.py",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "main/admin.py",
+      "bytes": 83,
+      "sha256": "db8aaa44e9d5f254ac889bd2b6377316e3c6e54218ac387ea9041d641312e9de"
+    },
+    {
+      "path": "main/context_processors.py",
+      "bytes": 138,
+      "sha256": "7368209ef89312428678e85872e75ed8e3f131d071688fa573066d0bcc979bb7"
+    },
+    {
+      "path": "main/migrations/0001_initial.py",
+      "bytes": 2204,
+      "sha256": "e0967a9d8a1a5335b142a9a2d7d980a96ca616218eb4586e4378a9619453de1d"
+    },
+    {
+      "path": "main/migrations/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "main/models.py",
+      "bytes": 1200,
+      "sha256": "e5090d9484240c1f13aae1400dfb1109a747e3775361d49643667929170d80a4"
+    },
+    {
+      "path": "main/services/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "main/services/assistant.py",
+      "bytes": 9162,
+      "sha256": "4afd7db9fd0407787c190007bb891530211d82ecc4add4eb63acceea3c4f99fe"
+    },
+    {
+      "path": "main/services/expenses.py",
+      "bytes": 3446,
+      "sha256": "50b1de62bddb12e6424a96589d834b7844a2334889f5ce7c3e9927354ed0ccc2"
+    },
+    {
+      "path": "main/tests.py",
+      "bytes": 9540,
+      "sha256": "310598fc2a9a41d17a970bdb2d371cc7260691e506a30968f9034a4b823d2e09"
+    },
+    {
+      "path": "main/urls.py",
+      "bytes": 608,
+      "sha256": "792dd0a58e8df2205133086e226827232bf2bd7ec8ca0a37822ead436f304654"
+    },
+    {
+      "path": "main/views.py",
+      "bytes": 2706,
+      "sha256": "f09f81e72735a6aaab094d1c8af46758bbe8066a5fa12c0784a6840ac07b2a6e"
+    },
+    {
+      "path": "manage.py",
+      "bytes": 628,
+      "sha256": "79d20328634c514f912e49e41e4327bc60cf6f22fcc50a334c88114941e7cf95"
+    },
+    {
+      "path": "project/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "project/settings.py",
+      "bytes": 3858,
+      "sha256": "2e35404d01a8cf93aa0f3403b609c7a77bf763a912a6f239c23357ea7c945ba1"
+    },
+    {
+      "path": "project/urls.py",
+      "bytes": 152,
+      "sha256": "19fc74529e326545dbfb014492843df6dbba31098ec383ac6e1958a5f2c73d31"
+    },
+    {
+      "path": "project/wsgi.py",
+      "bytes": 167,
+      "sha256": "a145d7c4b631f6f0577231d5d1019f3bc6b848745f189ef177af4c822382e715"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 145,
+      "sha256": "5f20bfb678a69202cebb1d7c6421045cbf9bde8459380d2797626faa60cca25a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7734,
+      "sha256": "6be06375ed7d7446de26d36ce3d04b1ef908b1bcafe99b25a90f7d0c7f5445cb"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "bytes": 33,
+      "sha256": "7c636dbf63bd10d5d9937827857e932b0bd73aa35c07c5465da5f38c6c56cd6b"
+    },
+    {
+      "path": "requirements-lock.txt",
+      "bytes": 578,
+      "sha256": "6f8bf8f86a08217e85c13986c273402e176a2ab012342e7c0b789e3c0072808c"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 91,
+      "sha256": "abcb5727881a80b394c0c66657a90963c417e60247ce454e655be0b8b7403725"
+    },
+    {
+      "path": "SOURCE_ACKNOWLEDGEMENTS.md",
+      "bytes": 1071,
+      "sha256": "6f7889e8ce011b12d25bf804ec3c7aba0fd3be17e39fb2f3b077a0dfbde5ad76"
+    },
+    {
+      "path": "START.ps1",
+      "bytes": 658,
+      "sha256": "54c118668f1519c6aaa511a3d0547e173e51916db6c2007ca4006b9f80d7d81e"
+    },
+    {
+      "path": "static/css/style.css",
+      "bytes": 20546,
+      "sha256": "7b3d97e13001420b2d2101d62f136e20d9393b916e453579fc4ba8b1c0cd69a2"
+    },
+    {
+      "path": "static/icon.svg",
+      "bytes": 219,
+      "sha256": "f30c776bc3d0bd8c93ac12cf79b743e4f46df4799d15edec67cb57fb172914bc"
+    },
+    {
+      "path": "static/js/app.js",
+      "bytes": 1639,
+      "sha256": "4568b3ddd47d64c8968d32c86d552830252be34a38c577f26b38ffc965b67428"
+    },
+    {
+      "path": "static/js/chat.js",
+      "bytes": 768,
+      "sha256": "736eafe6d3121270da8dc1e717a40c85ad66527489d09ce03def35cfb6340aa8"
+    },
+    {
+      "path": "static/js/code.js",
+      "bytes": 651,
+      "sha256": "533ceeff2e2f1acb2c3c716a54fef75b17d00696f247db9298d73411b6360f5c"
+    },
+    {
+      "path": "static/js/expenses.js",
+      "bytes": 3012,
+      "sha256": "1dde28802e819b8f4b3213b58b0df4deeddea1dfaf5dbd9a22878792511f3bb7"
+    },
+    {
+      "path": "static/js/recipe.js",
+      "bytes": 3228,
+      "sha256": "8bf57f6609e4252874d6267b76152607cb88bbe7caba273a0456dc8df1aab14b"
+    },
+    {
+      "path": "static/js/travel.js",
+      "bytes": 789,
+      "sha256": "9bb81ff3802661e7d780863e34acb1d394c48897c4caec233e7170cb98e4fd6e"
+    },
+    {
+      "path": "templates/base.html",
+      "bytes": 1377,
+      "sha256": "f425a09700432f3ac22047317aeced9643ebfdd9937c1aad35f2a07b7d49cdb7"
+    },
+    {
+      "path": "templates/chat.html",
+      "bytes": 887,
+      "sha256": "810b97a1bd88d4a174444e80a6bb95d2b3167b1290686795d3c22b0097053a5e"
+    },
+    {
+      "path": "templates/code.html",
+      "bytes": 1314,
+      "sha256": "c3fb91dfe3dd32413bfefe3059c3d899853039e4fe9f426f8dbec48d2449c21f"
+    },
+    {
+      "path": "templates/expenses.html",
+      "bytes": 1834,
+      "sha256": "8e0b4d6a0721e64f306a510abac88c70823460588df580d292e4009938981edc"
+    },
+    {
+      "path": "templates/home.html",
+      "bytes": 1271,
+      "sha256": "cb76295cd5a75dbde48e85cac5abc323987ae634113a7abe382585817e54229b"
+    },
+    {
+      "path": "templates/recipe.html",
+      "bytes": 1609,
+      "sha256": "8dfa34c001483388dd74625ea7e6182f44c51d94cefe44bdc096512f3e9087b1"
+    },
+    {
+      "path": "templates/travel.html",
+      "bytes": 1071,
+      "sha256": "848ec14554dcfd49e1f71170eeba951063160f1993d4e607b70978a706317599"
+    }
+  ]
+}

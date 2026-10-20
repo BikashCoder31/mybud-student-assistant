@@ -1,0 +1,8 @@
+{% extends 'base.html' %}{% load static %}{% block title %}Chat Assistant | MyBud{% endblock %}
+{% block extra_js %}<script src="{% static 'js/chat.js' %}" defer></script>{% endblock %}
+{% block content %}<div class="page-header"><h2>Chat Assistant</h2><p>A place to start planning a study session.</p></div>
+<div class="chatbot-container"><div class="chat-messages" id="chat-messages" role="log" aria-live="polite">
+<div class="bot-message"><div class="message-content">Welcome to MyBud. Enter a message to try the assistant.</div></div></div>
+<form id="chat-form" class="chat-input-container"><label for="chat-input" class="sr-only">Message</label>
+<input id="chat-input" class="chat-input" placeholder="Help me plan my study time" maxlength="4000" required><button class="btn btn-primary">Send</button></form></div>
+<p id="chat-status" class="status" role="status"></p>{% endblock %}

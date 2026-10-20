@@ -1,0 +1,8 @@
+{% extends 'base.html' %}{% load static %}{% block title %}Travel Assistant | MyBud{% endblock %}
+{% block extra_js %}<script src="{% static 'js/travel.js' %}" defer></script>{% endblock %}
+{% block content %}<div class="page-header"><h2>Travel Assistant</h2><p>A starting outline for your next trip.</p></div>
+<form id="travel-form" class="travel-search"><div><label for="destination-input">Destination</label><input id="destination-input" class="input-field" placeholder="Enter a destination" maxlength="120" required></div>
+<div><label for="duration-input">Days</label><input id="duration-input" class="input-field" type="number" min="1" max="30" step="1" value="3" required></div>
+<button class="btn btn-primary">Plan Trip</button></form><p id="travel-status" class="status" role="status"></p>
+<div id="travel-results" class="panel-section" aria-live="polite"><p>Choose a destination and duration to see a planning outline.</p></div>
+<p class="tool-note">Verify opening hours, transport and prices with current local sources before making bookings.</p>{% endblock %}
