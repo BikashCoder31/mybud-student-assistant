@@ -83,11 +83,13 @@ DATABASES = {
 }
 if os.getenv("DATABASE_URL"):
     database = dj_database_url.parse(
-        os.environ["DATABASE_URL"], conn_max_age=0, conn_health_checks=True, ssl_require=True
+        os.environ["DATABASE_URL"], conn_max_age=0, conn_health_checks=True
     )
     if database["ENGINE"] != "django.db.backends.postgresql":
         raise ImproperlyConfigured("DATABASE_URL must use PostgreSQL.")
     database["DISABLE_SERVER_SIDE_CURSORS"] = True
+    if database["OPTIONS"].get("sslmode") not in {"require", "verify-ca", "verify-full"}:
+        database["OPTIONS"]["sslmode"] = "require"
     database["OPTIONS"]["connect_timeout"] = 10
     DATABASES = {"default": database}
 elif IS_VERCEL:

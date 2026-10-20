@@ -48,6 +48,17 @@ class DeploymentTests(SimpleTestCase):
         self.assertNotEqual(response.returncode, 0)
         self.assertIn("DATABASE_URL", response.stderr)
 
+    def test_hosted_url_preserves_stronger_tls_verification(self):
+        for sslmode in ("verify-ca", "verify-full"):
+            with self.subTest(sslmode=sslmode):
+                response = self.settings_process(
+                    DATABASE_URL=f"postgresql://demo:password@db.example.invalid:5432/mybud?sslmode={sslmode}",
+                    VERCEL="1",
+                )
+                self.assertEqual(response.returncode, 0, response.stderr)
+                config = json.loads(response.stdout)
+                self.assertEqual(config["OPTIONS"]["sslmode"], sslmode)
+
     def test_serverless_deployment_rejects_sqlite_url(self):
         response = self.settings_process(DATABASE_URL="sqlite:///temporary.sqlite3", VERCEL="1")
         self.assertNotEqual(response.returncode, 0)
